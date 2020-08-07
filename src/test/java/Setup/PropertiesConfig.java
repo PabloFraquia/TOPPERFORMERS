@@ -8,7 +8,7 @@ import java.util.Properties;
 public class PropertiesConfig {
 	public static Properties getCredentialsProperties() {
 		try {
-			FileReader reader = new FileReader("credentials.properties");
+			FileReader reader = new FileReader(System.getProperty("user.dir")+"\\src\\test\\resources\\credentials.properties");
 			Properties prop=new Properties();
 			prop.load(reader);
 			return prop;
