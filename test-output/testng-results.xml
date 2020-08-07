@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-07T19:33:14 UYT" name="Default suite" finished-at="2020-08-07T19:34:01 UYT" duration-ms="46574">
+    <groups>
+    </groups>
+    <test started-at="2020-08-07T19:33:14 UYT" name="Default test" finished-at="2020-08-07T19:34:01 UYT" duration-ms="46574">
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:14 UYT" name="initializeProperties" finished-at="2020-08-07T19:33:14 UYT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeProperties -->
+        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:14 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:24 UYT" duration-ms="9901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitializeDriverAndLoginPage -->
+        <test-method signature="correctCredentials()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:24 UYT" name="correctCredentials" finished-at="2020-08-07T19:33:29 UYT" duration-ms="4696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctCredentials -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:29 UYT" name="CloseDriver" finished-at="2020-08-07T19:33:35 UYT" duration-ms="5630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
+        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:35 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:41 UYT" duration-ms="6385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitializeDriverAndLoginPage -->
+        <test-method signature="noPassword()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:41 UYT" name="noPassword" finished-at="2020-08-07T19:33:42 UYT" duration-ms="720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noPassword -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:42 UYT" name="CloseDriver" finished-at="2020-08-07T19:33:47 UYT" duration-ms="5612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
+        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:47 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:54 UYT" duration-ms="7196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitializeDriverAndLoginPage -->
+        <test-method signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:54 UYT" name="wrongCredentials" finished-at="2020-08-07T19:33:55 UYT" duration-ms="795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongCredentials -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:55 UYT" name="CloseDriver" finished-at="2020-08-07T19:34:01 UYT" duration-ms="5605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

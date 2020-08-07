@@ -2,16 +2,13 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Properties;
 
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Setup.DriverConfig;
@@ -36,7 +33,7 @@ public class LoginTest {
 
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void InitializeDriverAndLoginPage() {
 		this.driver = DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -46,19 +43,22 @@ public class LoginTest {
 	@Test
 	public void correctCredentials() {
 		login.login(emailAdmin, password);
-		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
+		
+		
 	}
 
 	@Test
 	public void wrongCredentials() {
 		login.login(emailAdmin, password + "asd");
+		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
 	}
 	@Test
 	public void noPassword() {
 		login.login(emailAdmin, "");
+		assertEquals(login.checkErrorMessage(), "Please enter your password.");
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void CloseDriver() {
 		try {
 			Thread.sleep(5000);
