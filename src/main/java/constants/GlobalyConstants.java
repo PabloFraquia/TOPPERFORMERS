@@ -10,10 +10,14 @@ public class GlobalyConstants {
 	public static final String spinner = "//div[contains(@class, 'forceListViewManagerPrimaryDisplayManager')]/div[contains(@class,'slds-spinner_container')]";
 	
 	//GLOBAL ACTIONS BUTTONS
-	public static final String btnSetup = "//*[@data-key = 'setup']";
+	//public static final String btnSetup = "//*[@data-key = 'setup']";
+	public static final String btnSetup = ".setupGear";
+	public static final String selectSetup = "#related_setup_app_home";
+	public static final String selectServiceSetup = "#service_setup_home";
+	public static final String selectDeveloperConsole = "#developer-console-link";
 	
-	// OTHER BUTTONS
-	public static final String btnCancel = "//div[contains(@class,'button-container-inner')]/button/span[text()='Cancel']/parent::button";
-	public static final String btnSaveAndNew = "//div[contains(@class,'button-container-inner')]/button/span[text()='Save & New']/parent::button";
-
+	public static final String saveAndNewButton = "//*[@title = 'Save & New']";
+	public static final String saveButton = "//*[@title = 'Save']";
+	public static final String cancelButton = "//*[@title = 'Cancel']";
+	
 }
