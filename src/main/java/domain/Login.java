@@ -14,4 +14,9 @@ public class Login {
 	public void login(String user, String password) {
 		
 	}
+
+	public String checkErrorMessage() {
+		return null; //Error message from WebElement
+		
+	}
 }
