@@ -1,10 +1,10 @@
 package constants;
 
-public class GlobalyConstants {
+public class GlobalConstants {
 	
 	//AppBox
-	public static final String btnSearchAppBox = "*[class = 'slds-icon-waffle']";
-	public static final String inputSearchAppBox = "//*[@class = 'slds-input']";
+	public static final String btnSearchAppBox = ".slds-icon-waffle";
+	public static final String inputSearchAppBox = "#input-62";
 	
 	//FANTASTIC SOLUTION FOR WAITING THE SPINNER
 	public static final String spinner = "//div[contains(@class, 'forceListViewManagerPrimaryDisplayManager')]/div[contains(@class,'slds-spinner_container')]";
