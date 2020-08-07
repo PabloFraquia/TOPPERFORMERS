@@ -31,6 +31,7 @@ public class LoginTest {
 			emailAdmin=prop.getProperty("emailAdmin");
 			password=prop.getProperty("password");
 			url=prop.getProperty("url");
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -45,27 +46,28 @@ public class LoginTest {
 	public void InitializeDriverAndLoginPage() {
 		this.driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
+		login=new Login(driver);
 	}
 	@Test
 	public void correctCredentials() {
-		Login.login(emailAdmin, password);
+		login.login(emailAdmin, password);
 	}
 	
 	@Test
 	public void wrongCredentials() {
-		Login.login(emailAdmin, password+"asd");
+		login.login(emailAdmin, password+"asd");
 	}
 	@Test
 	public void noCredentials() {
-		Login.login("", "");
+		login.login("", "");
 	}
 	@Test
 	public void noPassword() {
-		Login.login(emailAdmin, "");
+		login.login(emailAdmin, "");
 	}
 	@Test
 	public void noEmail() {
-		Login.login("", password);
+		login.login("", password);
 	}
 	
 	
