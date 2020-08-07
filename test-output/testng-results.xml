@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-07T19:33:14 UYT" name="Default suite" finished-at="2020-08-07T19:34:01 UYT" duration-ms="46574">
+  <suite name="Default suite" duration-ms="48242" started-at="2020-08-07T19:46:15 UYT" finished-at="2020-08-07T19:47:03 UYT">
     <groups>
     </groups>
-    <test started-at="2020-08-07T19:33:14 UYT" name="Default test" finished-at="2020-08-07T19:34:01 UYT" duration-ms="46574">
+    <test name="Default test" duration-ms="48242" started-at="2020-08-07T19:46:15 UYT" finished-at="2020-08-07T19:47:03 UYT">
       <class name="Tests.LoginTest">
-        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:14 UYT" name="initializeProperties" finished-at="2020-08-07T19:33:14 UYT" duration-ms="6" status="PASS">
+        <test-method status="PASS" signature="initializeProperties()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="initializeProperties" is-config="true" duration-ms="16" started-at="2020-08-07T19:46:15 UYT" finished-at="2020-08-07T19:46:15 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeProperties -->
-        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:14 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:24 UYT" duration-ms="9901" status="PASS">
+        <test-method status="PASS" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="InitializeDriverAndLoginPage" is-config="true" duration-ms="11142" started-at="2020-08-07T19:46:15 UYT" finished-at="2020-08-07T19:46:26 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeDriverAndLoginPage -->
-        <test-method signature="correctCredentials()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:24 UYT" name="correctCredentials" finished-at="2020-08-07T19:33:29 UYT" duration-ms="4696" status="PASS">
+        <test-method status="PASS" signature="correctCredentials()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="correctCredentials" duration-ms="3822" started-at="2020-08-07T19:46:26 UYT" finished-at="2020-08-07T19:46:30 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- correctCredentials -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:29 UYT" name="CloseDriver" finished-at="2020-08-07T19:33:35 UYT" duration-ms="5630" status="PASS">
+        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="CloseDriver" is-config="true" duration-ms="5938" started-at="2020-08-07T19:46:30 UYT" finished-at="2020-08-07T19:46:36 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
-        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:35 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:41 UYT" duration-ms="6385" status="PASS">
+        <test-method status="PASS" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="InitializeDriverAndLoginPage" is-config="true" duration-ms="5605" started-at="2020-08-07T19:46:36 UYT" finished-at="2020-08-07T19:46:42 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeDriverAndLoginPage -->
-        <test-method signature="noPassword()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:41 UYT" name="noPassword" finished-at="2020-08-07T19:33:42 UYT" duration-ms="720" status="PASS">
+        <test-method status="PASS" signature="noPassword()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="noPassword" duration-ms="1197" started-at="2020-08-07T19:46:42 UYT" finished-at="2020-08-07T19:46:43 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noPassword -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:42 UYT" name="CloseDriver" finished-at="2020-08-07T19:33:47 UYT" duration-ms="5612" status="PASS">
+        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="CloseDriver" is-config="true" duration-ms="6769" started-at="2020-08-07T19:46:43 UYT" finished-at="2020-08-07T19:46:50 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
-        <test-method is-config="true" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:47 UYT" name="InitializeDriverAndLoginPage" finished-at="2020-08-07T19:33:54 UYT" duration-ms="7196" status="PASS">
+        <test-method status="PASS" signature="InitializeDriverAndLoginPage()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="InitializeDriverAndLoginPage" is-config="true" duration-ms="6335" started-at="2020-08-07T19:46:50 UYT" finished-at="2020-08-07T19:46:56 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeDriverAndLoginPage -->
-        <test-method signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:54 UYT" name="wrongCredentials" finished-at="2020-08-07T19:33:55 UYT" duration-ms="795" status="PASS">
+        <test-method status="PASS" signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="wrongCredentials" duration-ms="1695" started-at="2020-08-07T19:46:56 UYT" finished-at="2020-08-07T19:46:58 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongCredentials -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@4690b489]" started-at="2020-08-07T19:33:55 UYT" name="CloseDriver" finished-at="2020-08-07T19:34:01 UYT" duration-ms="5605" status="PASS">
+        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:Tests.LoginTest@78e67e0a]" name="CloseDriver" is-config="true" duration-ms="5652" started-at="2020-08-07T19:46:58 UYT" finished-at="2020-08-07T19:47:03 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
