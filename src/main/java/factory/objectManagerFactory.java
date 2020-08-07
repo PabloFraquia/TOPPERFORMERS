@@ -13,6 +13,7 @@ public class objectManagerFactory {
 	WebDriver driver;
 	
 	@FindBy (xpath = objectManagerConstants.objectManagerButtonNew)private WebElement objectManagerButtonNew;
+	@FindBy (css = objectManagerConstants.inputQuickfind)private WebElement inputQuickfind;
 
 	public objectManagerFactory(WebDriver driver) {
 		this.driver = driver;
@@ -23,6 +24,10 @@ public class objectManagerFactory {
 		return objectManagerButtonNew;
 	}
 	
+	public WebElement getInputQuickfind() {
+		return inputQuickfind;
+	}
+
 	public WebElement getSetupTab (String tab) {
 		return driver.findElement(By.cssSelector(objectManagerConstants.setupTab.replace("$x", tab)));
 	}
