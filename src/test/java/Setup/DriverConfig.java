@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 
-public class Driverconfig {
+public class DriverConfig {
 
 	public enum Browser {
 		FIREFOX, CHROME, MICROSOFTEDGE
