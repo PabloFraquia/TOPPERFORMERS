@@ -8,14 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import constants.setup.objectManager.objectManagerConstants;
 
-public class objectManagerFactory {
+public class ObjectManagerFactory {
 	
 	WebDriver driver;
 	
 	@FindBy (xpath = objectManagerConstants.objectManagerButtonNew)private WebElement objectManagerButtonNew;
 	@FindBy (css = objectManagerConstants.inputQuickfind)private WebElement inputQuickfind;
 
-	public objectManagerFactory(WebDriver driver) {
+	public ObjectManagerFactory(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}

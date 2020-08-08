@@ -1,44 +1,56 @@
 package factory;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import constants.setup.objectManager.objectManagerCapabilities.validationRulesConstants;
 
-public class validationRulesFactory {
+public class ValidationRulesFactory {
 	
 	WebDriver driver;
 
-	@FindBy (css = validationRulesConstants.validatioRuleName)private WebDriver validatioRuleName;
-	@FindBy (css = validationRulesConstants.formulaText)private WebDriver formulaText;
-	@FindBy (css = validationRulesConstants.validatioMessage)private WebDriver validationRuleMessage;
-	@FindBy (css = validationRulesConstants.errorMessage)private WebDriver errorMessage;
+	@FindBy (css = validationRulesConstants.validatioRuleName)private WebElement validatioRuleName;
+	@FindBy (css = validationRulesConstants.formulaText)private WebElement formulaText;
+	@FindBy (css = validationRulesConstants.validatioMessage)private WebElement validationRuleMessage;
+	@FindBy (css = validationRulesConstants.errorFormulaMsg)private WebElement errorFormulaMsg;
+	@FindBy (css = validationRulesConstants.errorMessage)private WebElement errorMessage;
+	@FindBy (xpath = validationRulesConstants.editButton)private WebElement editButton;
 	
-	public validationRulesFactory(WebDriver driver) {
+	public ValidationRulesFactory(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}
 
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public WebDriver getValidatioRuleName() {
+	
+	public WebElement getValidatioRuleName() {
 		return validatioRuleName;
 	}
 
-	public WebDriver getFormulaText() {
+	public WebElement getFormulaText() {
 		return formulaText;
 	}
 
-	public WebDriver getValidationRuleMessage() {
+	public WebElement getValidationRuleMessage() {
 		return validationRuleMessage;
 	}
+	
 
-	public WebDriver getErrorMessage() {
+	public WebElement getErrorFormulaMsg() {
+		return errorFormulaMsg;
+	}
+
+
+	public WebElement getErrorMessage() {
 		return errorMessage;
 	}
+
+	public WebElement getEditButton() {
+		return editButton;
+	}
+	
+	
 	
 	
 }
