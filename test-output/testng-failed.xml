@@ -5,8 +5,10 @@
     <classes>
       <class name="Tests.ValidationRuleTest">
         <methods>
+          <include name="noRequiredField"/>
           <include name="InitializeDriverAndLoginPage"/>
           <include name="correctFilledFields"/>
+          <include name="wrongFormulaText"/>
           <include name="initValidationRuleProperties"/>
         </methods>
       </class> <!-- Tests.ValidationRuleTest -->
