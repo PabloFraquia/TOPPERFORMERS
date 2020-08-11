@@ -43,15 +43,7 @@ public class ValidationRuleTest extends TestingBase{
 		Home home=new Home(driver);
 		home.waitForHomeLoading();
 		ObjectManager objectManager=new ObjectManager(driver);
-		objectManager.goToValidationRules(tabName, objectName, detailName); // aca es donde esta saltando la falla 
-		
-		/* también intenté manual pero no encuentra los elementos
-		 
-		driver.findElement(By.xpath("//*[@title = 'Object Manager']")).click();
-		driver.findElement(By.xpath("//*[text() = 'Account']")).click();
-		driver.findElement(By.xpath("//*[text() = 'Validation Rules']")).click();
-		*/
-		
+		objectManager.goToValidationRules(tabName, objectName, detailName); 		
 		
 	}
 	@AfterMethod

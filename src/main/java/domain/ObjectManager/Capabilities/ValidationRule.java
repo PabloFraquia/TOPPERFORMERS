@@ -17,9 +17,9 @@ public class ValidationRule extends Global {
 	
 	public void validationRuleConstruction(String name, String formula, String message) {
 		
-		vf.getValidatioRuleName().sendKeys(name);
-		vf.getFormulaText().sendKeys(formula);
-		vf.getValidatioRuleName().sendKeys(message);
+		vf.getInputValidatioRuleName().sendKeys(name);
+		vf.getInputFormulaText().sendKeys(formula);
+		vf.getInputValidationRuleMessage().sendKeys(message);
 		this.gf.getSaveButton().click();	
 	}
 	

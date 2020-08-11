@@ -11,9 +11,9 @@ public class ValidationRulesFactory {
 	
 	WebDriver driver;
 
-	@FindBy (css = validationRulesConstants.validatioRuleName)private WebElement validatioRuleName;
-	@FindBy (css = validationRulesConstants.formulaText)private WebElement formulaText;
-	@FindBy (css = validationRulesConstants.validatioMessage)private WebElement validationRuleMessage;
+	@FindBy (css = validationRulesConstants.validatioRuleName)private WebElement inputValidatioRuleName;
+	@FindBy (css = validationRulesConstants.formulaText)private WebElement inputFormulaText;
+	@FindBy (css = validationRulesConstants.validatioMessage)private WebElement inputValidationRuleMessage;
 	@FindBy (css = validationRulesConstants.errorFormulaMsg)private WebElement errorFormulaMsg;
 	@FindBy (css = validationRulesConstants.errorMessage)private WebElement errorMessage;
 	@FindBy (xpath = validationRulesConstants.editButton)private WebElement editButton;
@@ -24,18 +24,20 @@ public class ValidationRulesFactory {
 		}
 
 	
-	public WebElement getValidatioRuleName() {
-		return validatioRuleName;
+	public WebElement getInputValidatioRuleName() {
+		return inputValidatioRuleName;
 	}
 
-	public WebElement getFormulaText() {
-		return formulaText;
+
+	public WebElement getInputFormulaText() {
+		return inputFormulaText;
 	}
 
-	public WebElement getValidationRuleMessage() {
-		return validationRuleMessage;
+
+	public WebElement getInputValidationRuleMessage() {
+		return inputValidationRuleMessage;
 	}
-	
+
 
 	public WebElement getErrorFormulaMsg() {
 		return errorFormulaMsg;
