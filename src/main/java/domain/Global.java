@@ -1,8 +1,10 @@
 package domain;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factory.GlobalFactory;
@@ -11,7 +13,15 @@ public abstract class Global {
 	protected WebDriverWait wait;
 	protected GlobalFactory gf;
 	public Global(WebDriver driver) {
-		this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
 		this.gf=new GlobalFactory(driver);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	
+	public void waitForSpinner() {
+		wait.until(ExpectedConditions.attributeContains(gf.getSpinner(), "class", "hidden"));
+	}
+	public void waitForWorkspace() {
+		wait.until(ExpectedConditions.not(ExpectedConditions.attributeContains(gf.getWorkspace(), "class", "active")));
 	}
 }
