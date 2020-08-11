@@ -1,37 +1,26 @@
-package domain;
+package domain.ObjectManager.Capabilities;
 
 import org.openqa.selenium.WebDriver;
 
-import factory.GlobalFactory;
-import factory.ObjectManagerFactory;
+import domain.Global;
 import factory.ValidationRulesFactory;
 
-public class ValidationRule extends Base {
+public class ValidationRule extends Global {
 	
 	ValidationRulesFactory vf;
-	GlobalFactory gf;
-	ObjectManagerFactory of;
-	
 	public ValidationRule(WebDriver driver) {
 		super(driver);
 		vf = new ValidationRulesFactory(driver);
-		gf = new GlobalFactory(driver);
-		of = new ObjectManagerFactory(driver);
 	}
 	
-	public void goToValidationRules(String tab, String object, String detail) {
-		of.getSetupTab(tab).click();
-		of.getNameObject(object).click();
-		of.getObjectManagerDetail(detail).click();
-		
-	}
+	
 	
 	public void validationRuleConstruction(String name, String formula, String message) {
-		of.getObjectManagerButtonNew().click();
+		
 		vf.getValidatioRuleName().sendKeys(name);
 		vf.getFormulaText().sendKeys(formula);
 		vf.getValidatioRuleName().sendKeys(message);
-		gf.getSaveButton().click();	
+		this.gf.getSaveButton().click();	
 	}
 	
 	public boolean checkErrorDisplay() {

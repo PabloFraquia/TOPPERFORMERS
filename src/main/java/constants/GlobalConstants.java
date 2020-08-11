@@ -19,5 +19,5 @@ public class GlobalConstants {
 	public static final String saveAndNewButton = "//*[@title = 'Save & New']";
 	public static final String saveButton = "//*[@title = 'Save']";
 	public static final String cancelButton = "//*[@title = 'Cancel']";
-	
+	//div.tileImgContainer
 }

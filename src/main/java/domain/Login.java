@@ -1,12 +1,11 @@
 package domain;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import factory.LoginFactory;
 
-public class Login extends Base{
+public class Login extends Global{
 	LoginFactory lf;
 	public Login(WebDriver driver) {
 		super(driver);
