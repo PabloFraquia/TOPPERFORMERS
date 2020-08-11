@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import Setup.DriverConfig;
 import Setup.ValidationPropConfig;
+import domain.Global;
 import domain.Home;
 import domain.Login;
 import domain.ObjectManager.ObjectManager;
@@ -35,7 +36,7 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@BeforeMethod
 	public void initializeDriverAndLoginPage() throws InterruptedException {
-		this.driver = DriverConfig.getDriverInitializer("chrome");
+		this.driver = DriverConfig.getDriverInitializer("firefox");
 		driver.get(url);
 		Login login = new Login(driver);
 		login.login(adminUser, password);
@@ -48,7 +49,7 @@ public class ValidationRuleTest extends TestingBase{
 	}
 	@AfterMethod
 	public void closeDriver() {
-		driver.close();
+		//driver.close();
 	}
 	
 	@BeforeClass
@@ -61,27 +62,27 @@ public class ValidationRuleTest extends TestingBase{
 	}
 	
 	@Test (priority = 0)
-	public void noRequiredField() throws InterruptedException {
+	public void noRequiredField() {
 		vRule.validationRuleConstruction(validationRuleName, formula, "");
-		assertEquals(vRule.checkErrorDisplay(), " You must enter a value");
-		Thread.sleep(5000);
-		gf.getCancelButton().click();
+		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
+		Global g=new Global(driver);
+		g.cancelValidationRule();
 		
 	}
 	
-	@Test (priority = 1)
+	/*@Test (priority = 1)
 	public void wrongFormulaText() throws InterruptedException {
 		vRule.validationRuleConstruction(validationRuleName, wrongFormula, errorMessage);
 		assertEquals(vRule.checkFormulaError(), " Syntax error.  Found 'Banana'");
 		Thread.sleep(5000);
 		gf.getCancelButton().click();
-	}
+	}*/
 	
-	@Test (priority = 2)
+	/*@Test (priority = 2)
 	public void correctFilledFields() {
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
 		//assertEquals(vRule.checkEditButton(), true);
 		
-	}
+	}*/
 
 }

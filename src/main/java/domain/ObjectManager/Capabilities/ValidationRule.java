@@ -1,12 +1,13 @@
 package domain.ObjectManager.Capabilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import domain.Global;
 import factory.ValidationRulesFactory;
 
 public class ValidationRule extends Global {
-	
 	ValidationRulesFactory vf;
 	public ValidationRule(WebDriver driver) {
 		super(driver);
@@ -17,18 +18,20 @@ public class ValidationRule extends Global {
 	
 	public void validationRuleConstruction(String name, String formula, String message) {
 		
-		vf.getInputValidatioRuleName().sendKeys(name);
-		vf.getInputFormulaText().sendKeys(formula);
-		vf.getInputValidationRuleMessage().sendKeys(message);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("iframe")));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
+		vf.getValidatioRuleName().sendKeys(name);
+		vf.getFormulaText().sendKeys(formula);
+		vf.getValidatioRuleName().sendKeys(message);
 		this.gf.getSaveButton().click();	
 	}
 	
-	public boolean checkErrorDisplay() {
-		return vf.getErrorMessage().isDisplayed();
+	public String checkErrorDisplay() {
+		return vf.getErrorFormulaMsg().getText();
 	}
 	
 	public boolean checkFormulaError() {
-		return vf.getErrorFormulaMsg().isDisplayed();
+		return vf.getErrorInvalidData().isDisplayed();
 	}
 	
 	public boolean checkEditButton() {

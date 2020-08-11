@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factory.GlobalFactory;
 
-public abstract class Global {
+public class Global {
 	protected WebDriverWait wait;
 	protected GlobalFactory gf;
 	public Global(WebDriver driver) {
@@ -23,5 +23,10 @@ public abstract class Global {
 	}
 	public void waitForWorkspace() {
 		wait.until(ExpectedConditions.not(ExpectedConditions.attributeContains(gf.getWorkspace(), "class", "active")));
+	}
+
+	public void cancelValidationRule() {
+		gf.getCancelButton().click();
+		
 	}
 }
