@@ -69,7 +69,6 @@ public class ValidationRuleTest extends TestingBase{
 		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
 		Global g=new Global(driver);
 		g.cancelValidationRule();
-		driver.quit();
 		
 		
 	}
@@ -80,13 +79,14 @@ public class ValidationRuleTest extends TestingBase{
 		assertEquals(vRule.checkFormulaError(), "Error: Syntax error. Found 'Banana'");
 		Global g=new Global(driver);
 		g.cancelValidationRule();
-		driver.quit();
 		
 	}
 	
 	@Test (priority = 2)
 	public void correctFilledFields() {
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
+		driver.switchTo().defaultContent();
+		
 		assertTrue(vRule.checkEditButton());
 		
 	}

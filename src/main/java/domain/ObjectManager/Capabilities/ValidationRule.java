@@ -9,9 +9,11 @@ import factory.ValidationRulesFactory;
 
 public class ValidationRule extends Global {
 	ValidationRulesFactory vf;
+	WebDriver driver;
 	public ValidationRule(WebDriver driver) {
 		super(driver);
 		vf = new ValidationRulesFactory(driver);
+		this.driver=driver;
 	}
 	
 	
@@ -24,6 +26,7 @@ public class ValidationRule extends Global {
 		vf.getInputFormulaText().sendKeys(formula);
 		vf.getInputValidationRuleMessage().sendKeys(message);
 		this.gf.getSaveButton().click();
+		
 	}
 	
 	public String checkErrorDisplay() {
@@ -35,6 +38,8 @@ public class ValidationRule extends Global {
 	}
 	
 	public boolean checkEditButton() {
+		waitForTitle("Object Manager");
+		System.out.println(driver.getTitle());
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("iframe")));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
 		return vf.getEditButton().isDisplayed();

@@ -29,4 +29,7 @@ public class Global {
 		gf.getCancelButton().click();
 		
 	}
+	public void waitForTitle(String title) {
+		wait.until(ExpectedConditions.titleContains(title));
+	}
 }
