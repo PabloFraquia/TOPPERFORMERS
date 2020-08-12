@@ -35,6 +35,8 @@ public class ValidationRule extends Global {
 	}
 	
 	public boolean checkEditButton() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("iframe")));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
 		return vf.getEditButton().isDisplayed();
 	}
 	
