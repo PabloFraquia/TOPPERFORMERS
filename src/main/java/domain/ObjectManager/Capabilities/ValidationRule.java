@@ -20,18 +20,18 @@ public class ValidationRule extends Global {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("iframe")));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
-		vf.getValidatioRuleName().sendKeys(name);
-		vf.getFormulaText().sendKeys(formula);
-		vf.getValidatioRuleName().sendKeys(message);
-		this.gf.getSaveButton().click();	
+		vf.getInputValidatioRuleName().sendKeys(name);
+		vf.getInputFormulaText().sendKeys(formula);
+		vf.getInputValidationRuleMessage().sendKeys(message);
+		this.gf.getSaveButton().click();
 	}
 	
 	public String checkErrorDisplay() {
 		return vf.getErrorFormulaMsg().getText();
 	}
 	
-	public boolean checkFormulaError() {
-		return vf.getErrorInvalidData().isDisplayed();
+	public String checkFormulaError() {
+		return vf.getErrorFormulaMsg().getText();
 	}
 	
 	public boolean checkEditButton() {

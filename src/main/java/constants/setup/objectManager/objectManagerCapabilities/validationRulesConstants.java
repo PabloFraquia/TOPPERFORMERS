@@ -9,5 +9,6 @@ public class validationRulesConstants {
 	public static final String errorFormulaMsg = ".errorMsg";
 	public static final String ErrorInvalidData = "#errorDiv_ep";
 	public static final String editButton = "//*[@id=\"topButtonRow\"]/input[1]";
+	public static final String backToValidatioRule = "//a[text() = 'Back to Account Validation Rules']";
 
 }

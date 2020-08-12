@@ -1,9 +1,11 @@
 package Tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Properties;
 
+import org.checkerframework.checker.units.qual.g;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -67,22 +69,26 @@ public class ValidationRuleTest extends TestingBase{
 		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
 		Global g=new Global(driver);
 		g.cancelValidationRule();
+		driver.quit();
+		
 		
 	}
 	
-	/*@Test (priority = 1)
-	public void wrongFormulaText() throws InterruptedException {
+	@Test (priority = 1)
+	public void wrongFormulaText() {
 		vRule.validationRuleConstruction(validationRuleName, wrongFormula, errorMessage);
-		assertEquals(vRule.checkFormulaError(), " Syntax error.  Found 'Banana'");
-		Thread.sleep(5000);
-		gf.getCancelButton().click();
-	}*/
+		assertEquals(vRule.checkFormulaError(), "Error: Syntax error. Found 'Banana'");
+		Global g=new Global(driver);
+		g.cancelValidationRule();
+		driver.quit();
+		
+	}
 	
-	/*@Test (priority = 2)
+	@Test (priority = 2)
 	public void correctFilledFields() {
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
-		//assertEquals(vRule.checkEditButton(), true);
+		assertTrue(vRule.checkEditButton());
 		
-	}*/
+	}
 
 }
