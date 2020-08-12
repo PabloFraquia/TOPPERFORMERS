@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.checkerframework.checker.units.qual.g;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -69,6 +70,7 @@ public class ValidationRuleTest extends TestingBase{
 		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
 		Global g=new Global(driver);
 		g.cancelValidationRule();
+		driver.quit();
 		
 		
 	}
@@ -79,16 +81,21 @@ public class ValidationRuleTest extends TestingBase{
 		assertEquals(vRule.checkFormulaError(), "Error: Syntax error. Found 'Banana'");
 		Global g=new Global(driver);
 		g.cancelValidationRule();
-		
+		driver.quit();
 	}
 	
 	@Test (priority = 2)
 	public void correctFilledFields() {
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
 		driver.switchTo().defaultContent();
-		
 		assertTrue(vRule.checkEditButton());
-		
+		vRule.deleteValidationRule();
 	}
+	
+	/*@AfterSuite
+	public void deleteValidationRules() {
+		vRule.deleteValidationRule();
+	}*/
+	
 
 }

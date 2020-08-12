@@ -29,8 +29,7 @@ public class LoginTest extends TestingBase{
 	@Test
 	public void correctCredentials() {
 		login.login(adminUser, password);
-		
-		
+			
 	}
 
 	@Test
