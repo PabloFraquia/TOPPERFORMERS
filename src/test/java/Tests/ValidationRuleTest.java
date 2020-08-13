@@ -7,9 +7,6 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -20,7 +17,6 @@ import domain.Home;
 import domain.Login;
 import domain.ObjectManager.ObjectManager;
 import domain.ObjectManager.Capabilities.ValidationRule;
-import factory.GlobalFactory;
 
 @Test
 public class ValidationRuleTest extends TestingBase{
@@ -115,6 +111,11 @@ public class ValidationRuleTest extends TestingBase{
 		driver.switchTo().defaultContent();
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
+	}
+	
+	public void login(WebDriver driver) {
+		Login PageLogin=new Login(driver);
+		PageLogin.login(adminUser, password);
 	}
 	
 	/*@AfterSuite
