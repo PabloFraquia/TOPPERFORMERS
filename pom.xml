@@ -13,6 +13,11 @@
 					<parallel>true</parallel>
 					<groups>${groups}</groups>
 					<threadCount>2</threadCount>
+					<includes>
+						<!--  <include>**/${testGroup}/*Test.Java</include> -->
+						<!--<include>**/${Tests}</include>-->
+					</includes>
+
 				</configuration>
 			</plugin>
 		</plugins>

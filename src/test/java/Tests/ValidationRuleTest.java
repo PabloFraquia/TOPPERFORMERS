@@ -43,10 +43,10 @@ public class ValidationRuleTest extends TestingBase{
 		objectManager.goToValidationRules(tabName, objectName, detailName); 		
 		
 	}*/
-	@AfterMethod
+	/*@AfterMethod
 	public void closeDriver() {
 		//driver.close();
-	}
+	}*/
 	
 	@BeforeSuite
 	public void initValidationRuleProperties() {
@@ -66,6 +66,7 @@ public class ValidationRuleTest extends TestingBase{
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
 		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
@@ -86,6 +87,7 @@ public class ValidationRuleTest extends TestingBase{
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
 		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
@@ -104,6 +106,7 @@ public class ValidationRuleTest extends TestingBase{
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
 		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);

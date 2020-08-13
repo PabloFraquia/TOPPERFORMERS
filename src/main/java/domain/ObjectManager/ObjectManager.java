@@ -18,12 +18,12 @@ public class ObjectManager extends Global{
 	public void goToValidationRules(String tab, String object, String detail) {
 		
 		omf.getSetupTab(tab).click();
-		waitForWorkspace(); // Waits might not be necessary when using implicit wait
+		//waitForWorkspace(); // Waits might not be necessary when using implicit wait
 		//waitForSpinner();
 		//must learn how to use presenceOfElementLocated in POM, since we can't use webElements
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(objectManagerConstants.nameObject.replace("$x", object)))).click();
-		omf.getObjectManagerDetail(detail).click();
-		omf.getObjectManagerButtonNew().click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getNameObjectLocator(object))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getObjectManagerDetailLocator(detail))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getObjectManagerButtonNewLocator())).click();
 		
 		
 	}
