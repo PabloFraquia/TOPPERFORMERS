@@ -65,7 +65,7 @@ public class ValidationRuleTest extends TestingBase{
 		Home home=new Home(driver);
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
-		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
@@ -85,7 +85,7 @@ public class ValidationRuleTest extends TestingBase{
 		Home home=new Home(driver);
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
-		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
@@ -103,7 +103,7 @@ public class ValidationRuleTest extends TestingBase{
 		Home home=new Home(driver);
 		ObjectManager objectManager=new ObjectManager(driver);
 		ValidationRule vRule=new ValidationRule(driver);
-		
+		driver.get(url);
 		login(driver);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
