@@ -117,14 +117,10 @@ public class ValidationRuleTest extends TestingBase{
 		vRule.deleteValidationRule();
 	}
 	
-	public void login(WebDriver driver) {
-		Login PageLogin=new Login(driver);
-		PageLogin.login(adminUser, password);
-	}
-
 	/*@AfterSuite
 	public void deleteValidationRules() {
 		vRule.deleteValidationRule();
 	}*/
+	
 
 }
