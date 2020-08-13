@@ -2,24 +2,24 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-12T11:54:02 UYT" name="Default suite" finished-at="2020-08-12T11:54:26 UYT" duration-ms="24091">
+  <suite started-at="2020-08-12T12:59:22 UYT" name="Default suite" finished-at="2020-08-12T12:59:47 UYT" duration-ms="24722">
     <groups>
     </groups>
-    <test started-at="2020-08-12T11:54:02 UYT" name="Default test" finished-at="2020-08-12T11:54:26 UYT" duration-ms="24091">
+    <test started-at="2020-08-12T12:59:22 UYT" name="Default test" finished-at="2020-08-12T12:59:47 UYT" duration-ms="24722">
       <class name="Tests.ValidationRuleTest">
-        <test-method is-config="true" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T11:54:02 UYT" name="initValidationRuleProperties" finished-at="2020-08-12T11:54:02 UYT" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T12:59:22 UYT" name="initValidationRuleProperties" finished-at="2020-08-12T12:59:22 UYT" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initValidationRuleProperties -->
-        <test-method is-config="true" signature="initializeDriverAndLoginPage()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T11:54:02 UYT" name="initializeDriverAndLoginPage" finished-at="2020-08-12T11:54:21 UYT" duration-ms="18936" status="PASS">
+        <test-method is-config="true" signature="initializeDriverAndLoginPage()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T12:59:22 UYT" name="initializeDriverAndLoginPage" finished-at="2020-08-12T12:59:42 UYT" duration-ms="19929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriverAndLoginPage -->
-        <test-method signature="correctFilledFields()[pri:2, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T11:54:21 UYT" name="correctFilledFields" finished-at="2020-08-12T11:54:26 UYT" duration-ms="5120" status="PASS">
+        <test-method signature="wrongFormulaText()[pri:1, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T12:59:42 UYT" name="wrongFormulaText" finished-at="2020-08-12T12:59:47 UYT" duration-ms="4758" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- correctFilledFields -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T11:54:26 UYT" name="closeDriver" finished-at="2020-08-12T11:54:26 UYT" duration-ms="0" status="PASS">
+        </test-method> <!-- wrongFormulaText -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T12:59:47 UYT" name="closeDriver" finished-at="2020-08-12T12:59:47 UYT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

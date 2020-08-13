@@ -19,7 +19,7 @@ public class ObjectManager extends Global{
 		
 		omf.getSetupTab(tab).click();
 		waitForWorkspace(); // Waits might not be necessary when using implicit wait
-		waitForSpinner();
+		//waitForSpinner();
 		//must learn how to use presenceOfElementLocated in POM, since we can't use webElements
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(objectManagerConstants.nameObject.replace("$x", object)))).click();
 		omf.getObjectManagerDetail(detail).click();

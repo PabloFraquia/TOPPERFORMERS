@@ -5,11 +5,11 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.Properties;
 
-import org.checkerframework.checker.units.qual.g;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import Setup.DriverConfig;
@@ -23,7 +23,6 @@ import factory.GlobalFactory;
 
 @Test
 public class ValidationRuleTest extends TestingBase{
-	WebDriver driver;
 	String tabName = "Object Manager";
 	String objectName = "Account";
 	String detailName = "Validation Rules";
@@ -31,14 +30,12 @@ public class ValidationRuleTest extends TestingBase{
 	String formula;
 	String wrongFormula;
 	String errorMessage;
-	ValidationRule vRule;
-	GlobalFactory gf;
 	
 	
 	
-	@BeforeMethod
+	/*@BeforeMethod
 	public void initializeDriverAndLoginPage() throws InterruptedException {
-		this.driver = DriverConfig.getDriverInitializer("firefox");
+		
 		driver.get(url);
 		Login login = new Login(driver);
 		login.login(adminUser, password);
@@ -48,14 +45,15 @@ public class ValidationRuleTest extends TestingBase{
 		ObjectManager objectManager=new ObjectManager(driver);
 		objectManager.goToValidationRules(tabName, objectName, detailName); 		
 		
-	}
+	}*/
 	@AfterMethod
 	public void closeDriver() {
 		//driver.close();
 	}
 	
-	@BeforeClass
+	@BeforeSuite
 	public void initValidationRuleProperties() {
+		
 		Properties valProperties = ValidationPropConfig.getValidationProperties();
 		validationRuleName = valProperties.getProperty("validationRuleName");
 		formula = valProperties.getProperty("formula");
@@ -65,6 +63,15 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 0)
 	public void noRequiredField() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
+		
+		Home home=new Home(driver);
+		ObjectManager objectManager=new ObjectManager(driver);
+		ValidationRule vRule=new ValidationRule(driver);
+		
+		login(driver);
+		home.waitForHomeLoading();
+		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, formula, "");
 		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
 		Global g=new Global(driver);
@@ -75,6 +82,15 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 1)
 	public void wrongFormulaText() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
+		
+		Home home=new Home(driver);
+		ObjectManager objectManager=new ObjectManager(driver);
+		ValidationRule vRule=new ValidationRule(driver);
+		
+		login(driver);
+		home.waitForHomeLoading();
+		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, wrongFormula, errorMessage);
 		assertEquals(vRule.checkFormulaError(), "Error: Syntax error. Found 'Banana'");
 		Global g=new Global(driver);
@@ -84,11 +100,25 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 2)
 	public void correctFilledFields() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
+		
+		Home home=new Home(driver);
+		ObjectManager objectManager=new ObjectManager(driver);
+		ValidationRule vRule=new ValidationRule(driver);
+		
+		login(driver);
+		home.waitForHomeLoading();
+		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
 		driver.switchTo().defaultContent();
 		
 		assertTrue(vRule.checkEditButton());
 		
+	}
+	
+	public void login(WebDriver driver) {
+		Login PageLogin=new Login(driver);
+		PageLogin.login(adminUser, password);
 	}
 
 }

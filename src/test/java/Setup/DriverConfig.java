@@ -46,6 +46,7 @@ public class DriverConfig {
 		ChromeOptions options = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("profile.default_content_setting_values.notifications", 2);
+		options.addArguments("--headless");
 		options.setExperimentalOption("prefs", prefs);
 		
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/chromedriver.exe");
