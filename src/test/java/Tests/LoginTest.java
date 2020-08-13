@@ -30,6 +30,7 @@ public class LoginTest extends TestingBase{
 		driver.get(url);
 		Login login=new Login(driver);
 		login.login(adminUser, password);
+<<<<<<< HEAD
 		driver.close();
 		
 	}

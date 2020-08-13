@@ -45,4 +45,13 @@ public class ValidationRule extends Global {
 		return vf.getEditButton().isDisplayed();
 	}
 	
+	public void deleteValidationRule() {
+		vf.getBackToValidationRuleLink().click();
+		driver.switchTo().defaultContent();
+		wait.until(ExpectedConditions.presenceOfElementLocated(vf.getDropDownArrowLocator()));
+		vf.getDropDownArrow().click();
+		vf.getSelectDelete().click();
+		vf.getButtonDelete().click();
+	}
+	
 }

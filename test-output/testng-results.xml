@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2020-08-12T12:59:22 UYT" name="Default suite" finished-at="2020-08-12T12:59:47 UYT" duration-ms="24722">
     <groups>
     </groups>
@@ -20,6 +21,26 @@
           </reporter-output>
         </test-method> <!-- wrongFormulaText -->
         <test-method is-config="true" signature="closeDriver()[pri:0, instance:Tests.ValidationRuleTest@3aefe5e5]" started-at="2020-08-12T12:59:47 UYT" name="closeDriver" finished-at="2020-08-12T12:59:47 UYT" duration-ms="0" status="PASS">
+=======
+  <suite name="Default suite" duration-ms="36585" started-at="2020-08-12T18:01:44 UYT" finished-at="2020-08-12T18:02:20 UYT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="36585" started-at="2020-08-12T18:01:44 UYT" finished-at="2020-08-12T18:02:20 UYT">
+      <class name="Tests.ValidationRuleTest">
+        <test-method status="PASS" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="initValidationRuleProperties" is-config="true" duration-ms="15" started-at="2020-08-12T18:01:44 UYT" finished-at="2020-08-12T18:01:44 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initValidationRuleProperties -->
+        <test-method status="PASS" signature="initializeDriverAndLoginPage()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="initializeDriverAndLoginPage" is-config="true" duration-ms="29548" started-at="2020-08-12T18:01:44 UYT" finished-at="2020-08-12T18:02:13 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriverAndLoginPage -->
+        <test-method status="PASS" signature="correctFilledFields()[pri:2, instance:Tests.ValidationRuleTest@2a742aa2]" name="correctFilledFields" duration-ms="6960" started-at="2020-08-12T18:02:13 UYT" finished-at="2020-08-12T18:02:20 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctFilledFields -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="closeDriver" is-config="true" duration-ms="1" started-at="2020-08-12T18:02:20 UYT" finished-at="2020-08-12T18:02:20 UYT">
+>>>>>>> 348cf1c3b38ec4b341fe472f0a76a78156d2fde5
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

@@ -10,5 +10,7 @@ public class validationRulesConstants {
 	public static final String ErrorInvalidData = "#errorDiv_ep";
 	public static final String editButton = "//*[@id=\"topButtonRow\"]/input[1]";
 	public static final String backToValidatioRule = "//a[text() = 'Back to Account Validation Rules']";
-
+	public static final String dropDownArrow = "div[class = 'objectManagerVirtualActionMenu']>div";
+	public static final String selectDelete = "a[title = 'Delete']";
+	public static final String buttonDelete = "//button[@title = 'delete']";
 }
