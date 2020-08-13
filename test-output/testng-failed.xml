@@ -5,7 +5,9 @@
     <classes>
       <class name="Tests.ValidationRuleTest">
         <methods>
+          <include name="noRequiredField"/>
           <include name="correctFilledFields"/>
+          <include name="wrongFormulaText"/>
           <include name="closeDriver"/>
           <include name="initializeDriverAndLoginPage"/>
           <include name="initValidationRuleProperties"/>

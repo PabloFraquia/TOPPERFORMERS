@@ -24,7 +24,7 @@ import factory.GlobalFactory;
 
 @Test
 public class ValidationRuleTest extends TestingBase{
-	WebDriver driver;
+	
 	String tabName = "Object Manager";
 	String objectName = "Account";
 	String detailName = "Validation Rules";
@@ -32,14 +32,15 @@ public class ValidationRuleTest extends TestingBase{
 	String formula;
 	String wrongFormula;
 	String errorMessage;
-	ValidationRule vRule;
-	GlobalFactory gf;
+	
 	
 	
 	
 	@BeforeMethod
 	public void initializeDriverAndLoginPage() throws InterruptedException {
-		this.driver = DriverConfig.getDriverInitializer("firefox");
+		WebDriver driver;
+		ValidationRule vRule = new ValidationRule(driver);
+		driver = DriverConfig.getDriverInitializer("firefox");
 		driver.get(url);
 		Login login = new Login(driver);
 		login.login(adminUser, password);
@@ -66,6 +67,7 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 0)
 	public void noRequiredField() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		vRule.validationRuleConstruction(validationRuleName, formula, "");
 		assertEquals(vRule.checkErrorDisplay(), "Error: You must enter a value");
 		Global g=new Global(driver);
@@ -77,6 +79,7 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 1)
 	public void wrongFormulaText() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		vRule.validationRuleConstruction(validationRuleName, wrongFormula, errorMessage);
 		assertEquals(vRule.checkFormulaError(), "Error: Syntax error. Found 'Banana'");
 		Global g=new Global(driver);
@@ -86,6 +89,7 @@ public class ValidationRuleTest extends TestingBase{
 	
 	@Test (priority = 2)
 	public void correctFilledFields() {
+		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
 		driver.switchTo().defaultContent();
 		assertTrue(vRule.checkEditButton());
