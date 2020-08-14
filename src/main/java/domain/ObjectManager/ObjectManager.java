@@ -1,10 +1,6 @@
 package domain.ObjectManager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import constants.setup.objectManager.objectManagerConstants;
 import domain.Global;
 import factory.ObjectManagerFactory;
 
@@ -21,10 +17,13 @@ public class ObjectManager extends Global{
 		//waitForWorkspace(); // Waits might not be necessary when using implicit wait
 		//waitForSpinner();
 		//must learn how to use presenceOfElementLocated in POM, since we can't use webElements
-		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getNameObjectLocator(object))).click();
+		omf.getNameObject(object).click();
+		omf.getObjectManagerDetail(detail).click();
+		omf.getObjectManagerButtonNew().click();
+		/*wait.until(ExpectedConditions.presenceOfElementLocated(omf.getNameObjectLocator(object))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getObjectManagerDetailLocator(detail))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(omf.getObjectManagerButtonNewLocator())).click();
-		
+		*/
 		
 	}
 }

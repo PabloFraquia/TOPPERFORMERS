@@ -15,6 +15,7 @@ public class Global {
 	public Global(WebDriver driver) {
 		this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
 		this.gf=new GlobalFactory(driver);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
 	public void waitForSpinner() {
