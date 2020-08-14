@@ -16,14 +16,7 @@ public class LoginTest extends TestingBase{
 		super();
 	}
 
-	/*@BeforeMethod
-	public void InitializeDriverAndLoginPage() {
-		this.driver = DriverConfig.getDriverInitializer("chrome");
-		driver.get(url);
-		login = new Login(driver);
-	}*/
-
-	@Test
+	@Test (groups = {"Funtional"})
 	public void correctCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -32,7 +25,7 @@ public class LoginTest extends TestingBase{
 		assertEquals(driver.getTitle(),"Lightning Experience");
 	}
 
-	@Test
+	@Test (groups = {"Non-Funtional"})
 	public void wrongCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -41,7 +34,8 @@ public class LoginTest extends TestingBase{
 		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
 		driver.close();
 	}
-	@Test
+	
+	@Test (groups = {"Non-Funtional"})
 	public void noPassword() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -51,14 +45,4 @@ public class LoginTest extends TestingBase{
 		driver.close();
 	}
 
-	@AfterMethod
-	public void closeDriver() {
-		/*try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		//driver.quit();
-	}
 }

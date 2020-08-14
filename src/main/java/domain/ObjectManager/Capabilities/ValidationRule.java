@@ -17,7 +17,6 @@ public class ValidationRule extends Global {
 	}
 	
 	
-	
 	public void validationRuleConstruction(String name, String formula, String message) {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("iframe")));

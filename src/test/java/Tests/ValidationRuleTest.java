@@ -26,26 +26,7 @@ public class ValidationRuleTest extends TestingBase{
 	String formula;
 	String wrongFormula;
 	String errorMessage;
-	
-	
-	
-	/*@BeforeMethod
-	public void initializeDriverAndLoginPage() throws InterruptedException {
-		
-		driver.get(url);
-		Login login = new Login(driver);
-		login.login(adminUser, password);
-		vRule = new ValidationRule(driver);
-		Home home=new Home(driver);
-		home.waitForHomeLoading();
-		ObjectManager objectManager=new ObjectManager(driver);
-		objectManager.goToValidationRules(tabName, objectName, detailName); 		
-		
-	}*/
-	/*@AfterMethod
-	public void closeDriver() {
-		//driver.close();
-	}*/
+
 	
 	@BeforeSuite
 	public void initValidationRuleProperties() {
@@ -57,7 +38,7 @@ public class ValidationRuleTest extends TestingBase{
 		errorMessage = valProperties.getProperty("errorMessage");
 	}
 	
-	@Test (priority = 0)
+	@Test (groups = {"Non-Funtional"})
 	public void noRequiredField() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
@@ -79,7 +60,7 @@ public class ValidationRuleTest extends TestingBase{
 		
 	}
 	
-	@Test (priority = 1)
+	@Test (groups = {"Non-Funtional"})
 	public void wrongFormulaText() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
@@ -99,7 +80,7 @@ public class ValidationRuleTest extends TestingBase{
 		driver.quit();
 	}
 	
-	@Test (priority = 2)
+	@Test (groups = {"Funtional"})
 	public void correctFilledFields() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
@@ -117,11 +98,6 @@ public class ValidationRuleTest extends TestingBase{
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
 	}
-	
-	/*@AfterSuite
-	public void deleteValidationRules() {
-		vRule.deleteValidationRule();
-	}*/
-	
+
 
 }
