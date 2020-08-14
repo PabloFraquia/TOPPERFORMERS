@@ -1,99 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="2" total="6" passed="2">
+<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="37932" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
+  <suite name="Suite" duration-ms="43870" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:59 UYT">
     <groups>
       <group name="Non-Funtional">
-        <method signature="LoginTest.noPassword()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="noPassword" class="Tests.LoginTest"/>
-        <method signature="LoginTest.wrongCredentials()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="wrongCredentials" class="Tests.LoginTest"/>
-        <method signature="ValidationRuleTest.noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="noRequiredField" class="Tests.ValidationRuleTest"/>
-        <method signature="ValidationRuleTest.wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="wrongFormulaText" class="Tests.ValidationRuleTest"/>
+        <method signature="LoginTest.noPassword()[pri:0, instance:Tests.LoginTest@4d50efb8]" name="noPassword" class="Tests.LoginTest"/>
+        <method signature="LoginTest.wrongCredentials()[pri:0, instance:Tests.LoginTest@4d50efb8]" name="wrongCredentials" class="Tests.LoginTest"/>
+        <method signature="ValidationRuleTest.noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@467aecef]" name="noRequiredField" class="Tests.ValidationRuleTest"/>
+        <method signature="ValidationRuleTest.wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@467aecef]" name="wrongFormulaText" class="Tests.ValidationRuleTest"/>
       </group> <!-- Non-Funtional -->
     </groups>
-    <test name="Test" duration-ms="37932" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
+    <test name="Test" duration-ms="43870" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:59 UYT">
       <class name="Tests.ValidationRuleTest">
-        <test-method status="FAIL" signature="wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="wrongFormulaText" duration-ms="37099" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:53 UYT">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
-at domain.ObjectManager.Capabilities.ValidationRule.validationRuleConstruction(ValidationRule.java:24)
-at Tests.ValidationRuleTest.wrongFormulaText(ValidationRuleTest.java:76)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method status="PASS" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@467aecef]" name="initValidationRuleProperties" is-config="true" duration-ms="17" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:15 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initValidationRuleProperties -->
+        <test-method status="PASS" signature="wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@467aecef]" name="wrongFormulaText" duration-ms="43807" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:59 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongFormulaText -->
-        <test-method status="FAIL" signature="noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="noRequiredField" duration-ms="37871" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
-at domain.ObjectManager.Capabilities.ValidationRule.validationRuleConstruction(ValidationRule.java:24)
-at Tests.ValidationRuleTest.noRequiredField(ValidationRuleTest.java:54)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method status="PASS" signature="noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@467aecef]" name="noRequiredField" duration-ms="43273" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:59 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noRequiredField -->
       </class> <!-- Tests.ValidationRuleTest -->
       <class name="Tests.LoginTest">
-        <test-method status="PASS" signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="wrongCredentials" duration-ms="16182" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:32 UYT">
+        <test-method status="PASS" signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@4d50efb8]" name="wrongCredentials" duration-ms="20982" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:36 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongCredentials -->
-        <test-method status="PASS" signature="noPassword()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="noPassword" duration-ms="17261" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:33 UYT">
+        <test-method status="PASS" signature="noPassword()[pri:0, instance:Tests.LoginTest@4d50efb8]" name="noPassword" duration-ms="20350" started-at="2020-08-14T12:27:15 UYT" finished-at="2020-08-14T12:27:36 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noPassword -->
