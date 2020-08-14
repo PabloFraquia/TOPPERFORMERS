@@ -1,60 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results skipped="0" failed="2" ignored="2" total="6" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-13T12:32:22 UYT" name="Default suite" finished-at="2020-08-13T12:32:43 UYT" duration-ms="20901">
+  <suite name="Suite" duration-ms="37932" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
     <groups>
+      <group name="Non-Funtional">
+        <method signature="LoginTest.noPassword()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="noPassword" class="Tests.LoginTest"/>
+        <method signature="LoginTest.wrongCredentials()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="wrongCredentials" class="Tests.LoginTest"/>
+        <method signature="ValidationRuleTest.noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="noRequiredField" class="Tests.ValidationRuleTest"/>
+        <method signature="ValidationRuleTest.wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="wrongFormulaText" class="Tests.ValidationRuleTest"/>
+      </group> <!-- Non-Funtional -->
     </groups>
-    <test started-at="2020-08-13T12:32:22 UYT" name="Default test" finished-at="2020-08-13T12:32:43 UYT" duration-ms="20901">
+    <test name="Test" duration-ms="37932" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
       <class name="Tests.ValidationRuleTest">
-        <test-method is-config="true" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@149e0f5d]" started-at="2020-08-13T12:32:22 UYT" name="initValidationRuleProperties" finished-at="2020-08-13T12:32:22 UYT" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initValidationRuleProperties -->
-        <test-method signature="wrongFormulaText()[pri:1, instance:Tests.ValidationRuleTest@149e0f5d]" started-at="2020-08-13T12:32:22 UYT" name="wrongFormulaText" finished-at="2020-08-13T12:32:43 UYT" duration-ms="20874" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="wrongFormulaText" duration-ms="37099" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:53 UYT">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[Unable to locate element: /html/body/form/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/input
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
-System info: host: 'DESKTOP-R4MBS2E', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 25416, moz:profile: C:\Users\Martin\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0745bea9-22d9-4e63-b124-73a668c85744
-*** Element info: {Using=xpath, value=/html/body/form/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/input}]]>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/form/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/input
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
-System info: host: 'DESKTOP-R4MBS2E', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 25416, moz:profile: C:\Users\Martin\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0745bea9-22d9-4e63-b124-73a668c85744
-*** Element info: {Using=xpath, value=/html/body/form/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/input}
-at jdk.internal.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy15.sendKeys(Unknown Source)
-at domain.ObjectManager.Capabilities.ValidationRule.validationRuleConstruction(ValidationRule.java:25)
-at Tests.ValidationRuleTest.wrongFormulaText(ValidationRuleTest.java:94)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+at domain.ObjectManager.Capabilities.ValidationRule.validationRuleConstruction(ValidationRule.java:24)
+at Tests.ValidationRuleTest.wrongFormulaText(ValidationRuleTest.java:76)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
@@ -63,29 +41,63 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongFormulaText -->
+        <test-method status="FAIL" signature="noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@2a742aa2]" name="noRequiredField" duration-ms="37871" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:54 UYT">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+at domain.ObjectManager.Capabilities.ValidationRule.validationRuleConstruction(ValidationRule.java:24)
+at Tests.ValidationRuleTest.noRequiredField(ValidationRuleTest.java:54)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noRequiredField -->
       </class> <!-- Tests.ValidationRuleTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Tests.LoginTest">
+        <test-method status="PASS" signature="wrongCredentials()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="wrongCredentials" duration-ms="16182" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:32 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongCredentials -->
+        <test-method status="PASS" signature="noPassword()[pri:0, instance:Tests.LoginTest@7d70d1b1]" name="noPassword" duration-ms="17261" started-at="2020-08-14T11:55:16 UYT" finished-at="2020-08-14T11:55:33 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noPassword -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

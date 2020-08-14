@@ -15,7 +15,7 @@ public class LoginTest extends TestingBase{
 		super();
 	}
 
-	@Test
+	@Test (groups = {"Funtional"})
 	public void correctCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -24,7 +24,7 @@ public class LoginTest extends TestingBase{
 			
 	}
 
-	@Test
+	@Test (groups = {"Non-Funtional"})
 	public void wrongCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -33,7 +33,8 @@ public class LoginTest extends TestingBase{
 		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
 		driver.close();
 	}
-	@Test
+	
+	@Test (groups = {"Non-Funtional"})
 	public void noPassword() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
