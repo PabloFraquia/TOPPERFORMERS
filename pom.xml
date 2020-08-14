@@ -5,6 +5,10 @@
 	<groupId>Test</groupId>
 	<artifactId>TOPPERFORMERS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+       <maven.compiler.source>1.8</maven.compiler.source>
+       <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -17,6 +21,7 @@
 						<!--  <include>**/${testGroup}/*Test.Java</include> -->
 						<!--<include>**/${Tests}</include>-->
 					</includes>
+					
 
 				</configuration>
 			</plugin>
