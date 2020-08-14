@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-14T18:12:02 UYT" name="Default suite" finished-at="2020-08-14T18:12:19 UYT" duration-ms="17008">
+  <suite name="Default suite" duration-ms="104126" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:36:59 UYT">
     <groups>
+      <group name="Non-Funtional">
+        <method signature="ValidationRuleTest.noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="noRequiredField" class="Tests.ValidationRuleTest"/>
+        <method signature="ValidationRuleTest.wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="wrongFormulaText" class="Tests.ValidationRuleTest"/>
+      </group> <!-- Non-Funtional -->
       <group name="Funtional">
-        <method signature="LoginTest.correctCredentials()[pri:0, instance:Tests.LoginTest@60d8c9b7]" name="correctCredentials" class="Tests.LoginTest"/>
+        <method signature="ValidationRuleTest.correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="correctFilledFields" class="Tests.ValidationRuleTest"/>
       </group> <!-- Funtional -->
     </groups>
-    <test started-at="2020-08-14T18:12:02 UYT" name="Default test" finished-at="2020-08-14T18:12:19 UYT" duration-ms="17008">
-      <class name="Tests.LoginTest">
-        <test-method signature="correctCredentials()[pri:0, instance:Tests.LoginTest@60d8c9b7]" started-at="2020-08-14T18:12:02 UYT" name="correctCredentials" finished-at="2020-08-14T18:12:19 UYT" duration-ms="16977" status="PASS">
+    <test name="Default test" duration-ms="104126" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:36:59 UYT">
+      <class name="Tests.ValidationRuleTest">
+        <test-method status="PASS" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="initValidationRuleProperties" is-config="true" duration-ms="26" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:35:15 UYT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- correctCredentials -->
-      </class> <!-- Tests.LoginTest -->
+        </test-method> <!-- initValidationRuleProperties -->
+        <test-method status="PASS" signature="correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="correctFilledFields" duration-ms="39261" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:35:55 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctFilledFields -->
+        <test-method status="PASS" signature="noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="noRequiredField" duration-ms="31625" started-at="2020-08-14T18:35:55 UYT" finished-at="2020-08-14T18:36:26 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noRequiredField -->
+        <test-method status="PASS" signature="wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="wrongFormulaText" duration-ms="33181" started-at="2020-08-14T18:36:26 UYT" finished-at="2020-08-14T18:36:59 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongFormulaText -->
+      </class> <!-- Tests.ValidationRuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

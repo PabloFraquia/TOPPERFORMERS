@@ -28,7 +28,7 @@ public class ValidationRuleTest extends TestingBase{
 	String errorMessage;
 
 	
-	@BeforeSuite
+	@BeforeSuite (groups = {"Non-Funtional"})
 	public void initValidationRuleProperties() {
 		
 		Properties valProperties = ValidationPropConfig.getValidationProperties();
