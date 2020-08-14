@@ -97,6 +97,7 @@ public class ValidationRuleTest extends TestingBase{
 		driver.switchTo().defaultContent();
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
+		driver.quit();
 	}
 
 
