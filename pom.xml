@@ -12,7 +12,7 @@
 				<configuration>
 					<parallel>true</parallel>
 					<groups>${groups}</groups>
-					<threadCount>2</threadCount>
+					<threadCount>3</threadCount>
 					<includes>
 						<!--  <include>**/${testGroup}/*Test.Java</include> -->
 						<!--<include>**/${Tests}</include>-->

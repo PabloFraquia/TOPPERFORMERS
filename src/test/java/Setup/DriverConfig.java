@@ -62,8 +62,9 @@ public class DriverConfig {
 
 	private static WebDriver getFirefoxDriver() {
 		
-		 FirefoxOptions options = new FirefoxOptions();
-		 options.addPreference("dom.webnotifications.enabled",false);
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("dom.webnotifications.enabled",false);
+		options.addArguments("--headless");
 		
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/geckodriver.exe");
 		System.setProperty("webdriver.gecko.silentOutput", "true");

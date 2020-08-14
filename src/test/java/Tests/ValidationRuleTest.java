@@ -66,7 +66,8 @@ public class ValidationRuleTest extends TestingBase{
 		ValidationRule vRule=new ValidationRule(driver);
 		
 		driver.get(url);
-		login(driver);
+		Login PageLogin=new Login(driver);
+		PageLogin.login(adminUser, password);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, formula, "");
@@ -87,7 +88,8 @@ public class ValidationRuleTest extends TestingBase{
 		ValidationRule vRule=new ValidationRule(driver);
 		
 		driver.get(url);
-		login(driver);
+		Login PageLogin=new Login(driver);
+		PageLogin.login(adminUser, password);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, wrongFormula, errorMessage);
@@ -106,18 +108,14 @@ public class ValidationRuleTest extends TestingBase{
 		ValidationRule vRule=new ValidationRule(driver);
 		
 		driver.get(url);
-		login(driver);
+		Login PageLogin=new Login(driver);
+		PageLogin.login(adminUser, password);
 		home.waitForHomeLoading();
 		objectManager.goToValidationRules(tabName, objectName, detailName);
 		vRule.validationRuleConstruction(validationRuleName, formula, errorMessage);
 		driver.switchTo().defaultContent();
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
-	}
-	
-	public void login(WebDriver driver) {
-		Login PageLogin=new Login(driver);
-		PageLogin.login(adminUser, password);
 	}
 	
 	/*@AfterSuite
