@@ -8,14 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import constants.setup.objectManager.objectManagerConstants;
 
-public class objectManagerFactory {
+public class ObjectManagerFactory {
 	
 	WebDriver driver;
 	
 	@FindBy (xpath = objectManagerConstants.objectManagerButtonNew)private WebElement objectManagerButtonNew;
 	@FindBy (css = objectManagerConstants.inputQuickfind)private WebElement inputQuickfind;
 
-	public objectManagerFactory(WebDriver driver) {
+	public ObjectManagerFactory(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}
@@ -36,8 +36,21 @@ public class objectManagerFactory {
 		return driver.findElement(By.xpath(objectManagerConstants.nameObject.replace("$x", tab)));
 	}
 	
-	public WebElement getObjectManagerDetail (String tab) {
-		return driver.findElement(By.cssSelector(objectManagerConstants.objectManagerDetail.replace("$x", tab)));
+	public WebElement getObjectManagerDetail (String detail) {
+		return driver.findElement(By.cssSelector(objectManagerConstants.objectManagerDetail.replace("$x", detail)));
+	}
+
+	public By getNameObjectLocator(String object) {
+		
+		return By.xpath(objectManagerConstants.nameObject.replace("$x", object));
+	}
+
+	public By getObjectManagerDetailLocator(String detail) {
+		return By.cssSelector(objectManagerConstants.objectManagerDetail.replace("$x", detail));
+	}
+
+	public By getObjectManagerButtonNewLocator() {
+		return By.xpath(objectManagerConstants.objectManagerButtonNew);
 	}
 }
 

@@ -5,6 +5,23 @@
 	<groupId>Test</groupId>
 	<artifactId>TOPPERFORMERS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<parallel>true</parallel>
+					<groups>${groups}</groups>
+					<threadCount>6</threadCount>
+					<includes>
+						<!--  <include>**/${testGroup}/*Test.Java</include> -->
+						<!--<include>**/${Tests}</include>-->
+					</includes>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

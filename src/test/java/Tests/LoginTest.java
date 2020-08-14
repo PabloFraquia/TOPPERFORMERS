@@ -1,71 +1,64 @@
 package Tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Properties;
-
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import Setup.DriverConfig;
-import Setup.PropertiesConfig;
 import domain.Login;
 
 @Test
-public class LoginTest {
-	WebDriver driver;
-	String emailAdmin;
-	String password;
-	String url;
-	Login login;
-
-	@BeforeClass
-	public void initializeProperties() {
-
-		Properties prop = PropertiesConfig.getCredentialsProperties();
-		emailAdmin = prop.getProperty("emailAdmin");
-		password = prop.getProperty("password");
-		url = prop.getProperty("url");
-
+public class LoginTest extends TestingBase{
+	public LoginTest() {
+		super();
 	}
 
-	@BeforeTest
+	/*@BeforeMethod
 	public void InitializeDriverAndLoginPage() {
 		this.driver = DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
 		login = new Login(driver);
-	}
+	}*/
 
 	@Test
 	public void correctCredentials() {
-		login.login(emailAdmin, password);
-		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
+		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
+		driver.get(url);
+		Login login=new Login(driver);
+		login.login(adminUser, password);
+		assertEquals(driver.getTitle(),"Lightning Experience");
 	}
 
 	@Test
 	public void wrongCredentials() {
-		login.login(emailAdmin, password + "asd");
+		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
+		driver.get(url);
+		Login login=new Login(driver);
+		login.login(adminUser, password + "asd");
+		assertEquals(login.checkErrorMessage(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
+		driver.close();
 	}
 	@Test
 	public void noPassword() {
-		login.login(emailAdmin, "");
+		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
+		driver.get(url);
+		Login login=new Login(driver);
+		login.login(adminUser, "");
+		assertEquals(login.checkErrorMessage(), "Please enter your password.");
+		driver.close();
 	}
 
-	@AfterTest
-	public void CloseDriver() {
-		try {
+	@AfterMethod
+	public void closeDriver() {
+		/*try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		driver.quit();
+		}*/
+		//driver.quit();
 	}
 }

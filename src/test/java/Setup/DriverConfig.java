@@ -46,6 +46,9 @@ public class DriverConfig {
 		ChromeOptions options = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("profile.default_content_setting_values.notifications", 2);
+		options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        options.addArguments("disable-gpu");
 		options.setExperimentalOption("prefs", prefs);
 		
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/chromedriver.exe");
@@ -59,8 +62,9 @@ public class DriverConfig {
 
 	private static WebDriver getFirefoxDriver() {
 		
-		 FirefoxOptions options = new FirefoxOptions();
-		 options.addPreference("dom.webnotifications.enabled",false);
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("dom.webnotifications.enabled",false);
+		options.addArguments("--headless");
 		
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/geckodriver.exe");
 		System.setProperty("webdriver.gecko.silentOutput", "true");
