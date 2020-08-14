@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.ValidationRuleTest">
+      <class name="Tests.LoginTest">
         <methods>
-          <include name="wrongFormulaText"/>
-          <include name="initValidationRuleProperties"/>
+          <include name="correctCredentials"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- Tests.ValidationRuleTest -->
+      </class> <!-- Tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

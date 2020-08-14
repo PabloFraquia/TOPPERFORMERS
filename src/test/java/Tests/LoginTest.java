@@ -1,6 +1,7 @@
 package Tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -28,7 +29,7 @@ public class LoginTest extends TestingBase{
 		driver.get(url);
 		Login login=new Login(driver);
 		login.login(adminUser, password);
-			
+		assertEquals(driver.getTitle(),"Lightning Experience");
 	}
 
 	@Test
