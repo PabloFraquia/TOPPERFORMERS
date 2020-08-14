@@ -10,7 +10,6 @@ public class GlobalConstants {
 	//FANTASTIC SOLUTION FOR WAITING THE SPINNER
 	public static final String spinner = "#spinner-container";	
 	//GLOBAL ACTIONS BUTTONS
-	//public static final String btnSetup = "//*[@data-key = 'setup']";
 	public static final String btnSetup = ".setupGear";
 	public static final String selectSetup = "#related_setup_app_home";
 	public static final String selectServiceSetup = "#service_setup_home";
@@ -19,5 +18,4 @@ public class GlobalConstants {
 	public static final String saveAndNewButton = "//*[@title = 'Save & New']";
 	public static final String saveButton = "//*[@title = 'Save']";
 	public static final String cancelButton = "//*[@title = 'Cancel']";
-	//div.tileImgContainer
 }

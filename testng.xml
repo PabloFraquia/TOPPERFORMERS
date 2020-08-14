@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-  	<classes>
-  		<class name="LoginTest"></class>
-  	</classes>
-  </test> <!-- Test -->
+<suite name="Suite" parallel = "methods" thread-count = "6">
+	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<include name="Non-Funtional"/>
+				<exclude name ="Funtional"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="Tests.LoginTest"/>
+			<class name="Tests.ValidationRuleTest"/>
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
