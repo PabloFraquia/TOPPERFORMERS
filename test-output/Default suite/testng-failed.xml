@@ -6,7 +6,6 @@
       <class name="Tests.LoginTest">
         <methods>
           <include name="correctCredentials"/>
-          <include name="closeDriver"/>
         </methods>
       </class> <!-- Tests.LoginTest -->
     </classes>

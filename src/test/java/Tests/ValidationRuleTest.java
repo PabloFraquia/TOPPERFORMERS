@@ -28,7 +28,7 @@ public class ValidationRuleTest extends TestingBase{
 	String errorMessage;
 
 	
-	@BeforeSuite
+	@BeforeSuite (groups = {"Non-Funtional"})
 	public void initValidationRuleProperties() {
 		
 		Properties valProperties = ValidationPropConfig.getValidationProperties();
@@ -97,6 +97,7 @@ public class ValidationRuleTest extends TestingBase{
 		driver.switchTo().defaultContent();
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
+		driver.quit();
 	}
 
 

@@ -5,7 +5,7 @@
 		<groups>
 			<run>
 				<include name="Non-Funtional"/>
-				<exclude name ="Funtional"/>
+				<include name ="Funtional"/>
 			</run>
 		</groups>
 		<classes>

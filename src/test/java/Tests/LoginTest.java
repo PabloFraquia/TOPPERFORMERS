@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import Setup.DriverConfig;
+import domain.Home;
 import domain.Login;
 
 @Test
@@ -22,7 +23,10 @@ public class LoginTest extends TestingBase{
 		driver.get(url);
 		Login login=new Login(driver);
 		login.login(adminUser, password);
-		assertEquals(driver.getTitle(),"Lightning Experience");
+		Home home=new Home(driver);
+		home.waitForHomeLoading();
+		assertTrue(driver.getTitle().contains("Home"));
+		driver.close();
 	}
 
 	@Test (groups = {"Non-Funtional"})
