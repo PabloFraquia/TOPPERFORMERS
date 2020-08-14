@@ -26,26 +26,7 @@ public class ValidationRuleTest extends TestingBase{
 	String formula;
 	String wrongFormula;
 	String errorMessage;
-	
-	
-	
-	/*@BeforeMethod
-	public void initializeDriverAndLoginPage() throws InterruptedException {
-		
-		driver.get(url);
-		Login login = new Login(driver);
-		login.login(adminUser, password);
-		vRule = new ValidationRule(driver);
-		Home home=new Home(driver);
-		home.waitForHomeLoading();
-		ObjectManager objectManager=new ObjectManager(driver);
-		objectManager.goToValidationRules(tabName, objectName, detailName); 		
-		
-	}*/
-	/*@AfterMethod
-	public void closeDriver() {
-		//driver.close();
-	}*/
+
 	
 	@BeforeSuite
 	public void initValidationRuleProperties() {
@@ -117,11 +98,6 @@ public class ValidationRuleTest extends TestingBase{
 		assertTrue(vRule.checkEditButton());
 		vRule.deleteValidationRule();
 	}
-	
-	/*@AfterSuite
-	public void deleteValidationRules() {
-		vRule.deleteValidationRule();
-	}*/
-	
+
 
 }

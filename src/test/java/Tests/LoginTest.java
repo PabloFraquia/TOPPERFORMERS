@@ -15,13 +15,6 @@ public class LoginTest extends TestingBase{
 		super();
 	}
 
-	/*@BeforeMethod
-	public void InitializeDriverAndLoginPage() {
-		this.driver = DriverConfig.getDriverInitializer("chrome");
-		driver.get(url);
-		login = new Login(driver);
-	}*/
-
 	@Test
 	public void correctCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
@@ -50,14 +43,4 @@ public class LoginTest extends TestingBase{
 		driver.close();
 	}
 
-	@AfterMethod
-	public void closeDriver() {
-		/*try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		//driver.quit();
-	}
 }

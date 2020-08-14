@@ -2,7 +2,7 @@ package constants.setup.objectManager.objectManagerCapabilities;
 
 public class validationRulesConstants {
 	
-	//public static final String validatioRuleName = "#ValidationName";
+	
 	public static final String validatioRuleName = "/html/body/form/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/input";
 	public static final String formulaText = ".FormulaText";
 	public static final String validatioMessage = "#ValidationMessage";
