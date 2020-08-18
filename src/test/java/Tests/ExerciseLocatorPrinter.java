@@ -20,6 +20,7 @@ public class ExerciseLocatorPrinter extends TestingBase {
 		driver.get(url);
 		Login login=new Login(driver);
 		System.out.println(login.returnWebElement());
+		driver.quit();
 	}
 	
 	@Test
@@ -32,7 +33,7 @@ public class ExerciseLocatorPrinter extends TestingBase {
 		oM.goToValidationRules("Object Manager", "Account", "Validation Rules");
 		ValidationRule vRule = new ValidationRule(driver);
 		System.out.println(vRule.returnWebElement());
-		
+		driver.quit();
 	}
 	
 }
