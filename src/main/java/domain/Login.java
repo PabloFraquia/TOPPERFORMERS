@@ -26,4 +26,7 @@ public class Login extends Global{
 		return lf.getLogginError().isDisplayed();
 		
 	}
+	public String returnWebElement() {
+	return Utilities.returnLocator(lf.getButtonLogin());
+	}
 }

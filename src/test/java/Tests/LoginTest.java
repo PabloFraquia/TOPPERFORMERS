@@ -17,7 +17,7 @@ public class LoginTest extends TestingBase{
 		super();
 	}
 
-	@Test (groups = {"Funtional"})
+	@Test (groups = {"Funtional", "Login"})
 	public void correctCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -29,7 +29,7 @@ public class LoginTest extends TestingBase{
 		driver.close();
 	}
 
-	@Test (groups = {"Non-Funtional"})
+	@Test (groups = {"Non-Funtional", "Login"})
 	public void wrongCredentials() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);
@@ -39,7 +39,7 @@ public class LoginTest extends TestingBase{
 		driver.close();
 	}
 	
-	@Test (groups = {"Non-Funtional"})
+	@Test (groups = {"Non-Funtional", "Login"})
 	public void noPassword() {
 		WebDriver driver=DriverConfig.getDriverInitializer("chrome");
 		driver.get(url);

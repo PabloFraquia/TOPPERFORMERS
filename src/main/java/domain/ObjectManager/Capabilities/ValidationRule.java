@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import domain.Global;
+import domain.Utilities;
 import factory.ValidationRulesFactory;
 
 public class ValidationRule extends Global {
@@ -52,5 +53,10 @@ public class ValidationRule extends Global {
 		vf.getSelectDelete().click();
 		vf.getButtonDelete().click();
 	}
+	
+
+	public String returnWebElement() {
+		return Utilities.returnLocator(vf.getInputValidatioRuleName());
+		}
 	
 }
