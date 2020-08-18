@@ -9,10 +9,11 @@ public class Utilities {
 		String locator = "";
 		String aux = welement.toString();
 		if (aux.contains("selector")) {
-			locator = aux.substring(aux.indexOf("selector:"), aux.length() - 2);
+			aux = aux.split("selector:")[1];
+			locator=aux.substring(1, aux.length()-2);
 		} else if (aux.contains("xpath")) {
-			locator = aux.substring(aux.indexOf("xpath:"), aux.length() - 2);
-
+			aux = aux.split("xpath:")[1];
+			locator=aux.substring(1, aux.length()-2);
 		}
 		return locator;
 	}

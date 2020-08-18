@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42906" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:23:03 UYT">
+  <suite started-at="2020-08-18T13:05:46 UYT" name="Default suite" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8571">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42906" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:23:03 UYT">
+    <test started-at="2020-08-18T13:05:46 UYT" name="Default test" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8571">
       <class name="Tests.ExerciseLocatorPrinter">
-        <test-method status="PASS" signature="printLoginLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@7a765367]" name="printLoginLocator" duration-ms="7801" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:22:28 UYT">
+        <test-method signature="printLoginLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@20d28811]" started-at="2020-08-18T13:05:47 UYT" name="printLoginLocator" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printLoginLocator -->
-        <test-method status="PASS" signature="printVRuleLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@7a765367]" name="printVRuleLocator" duration-ms="35064" started-at="2020-08-18T12:22:28 UYT" finished-at="2020-08-18T12:23:03 UYT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- printVRuleLocator -->
       </class> <!-- Tests.ExerciseLocatorPrinter -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
