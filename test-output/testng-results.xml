@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="104126" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:36:59 UYT">
+  <suite name="Default suite" duration-ms="42906" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:23:03 UYT">
     <groups>
-      <group name="Non-Funtional">
-        <method signature="ValidationRuleTest.noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="noRequiredField" class="Tests.ValidationRuleTest"/>
-        <method signature="ValidationRuleTest.wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="wrongFormulaText" class="Tests.ValidationRuleTest"/>
-      </group> <!-- Non-Funtional -->
-      <group name="Funtional">
-        <method signature="ValidationRuleTest.correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="correctFilledFields" class="Tests.ValidationRuleTest"/>
-      </group> <!-- Funtional -->
     </groups>
-    <test name="Default test" duration-ms="104126" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:36:59 UYT">
-      <class name="Tests.ValidationRuleTest">
-        <test-method status="PASS" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="initValidationRuleProperties" is-config="true" duration-ms="26" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:35:15 UYT">
+    <test name="Default test" duration-ms="42906" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:23:03 UYT">
+      <class name="Tests.ExerciseLocatorPrinter">
+        <test-method status="PASS" signature="printLoginLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@7a765367]" name="printLoginLocator" duration-ms="7801" started-at="2020-08-18T12:22:20 UYT" finished-at="2020-08-18T12:22:28 UYT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initValidationRuleProperties -->
-        <test-method status="PASS" signature="correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="correctFilledFields" duration-ms="39261" started-at="2020-08-14T18:35:15 UYT" finished-at="2020-08-14T18:35:55 UYT">
+        </test-method> <!-- printLoginLocator -->
+        <test-method status="PASS" signature="printVRuleLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@7a765367]" name="printVRuleLocator" duration-ms="35064" started-at="2020-08-18T12:22:28 UYT" finished-at="2020-08-18T12:23:03 UYT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- correctFilledFields -->
-        <test-method status="PASS" signature="noRequiredField()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="noRequiredField" duration-ms="31625" started-at="2020-08-14T18:35:55 UYT" finished-at="2020-08-14T18:36:26 UYT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- noRequiredField -->
-        <test-method status="PASS" signature="wrongFormulaText()[pri:0, instance:Tests.ValidationRuleTest@86be70a]" name="wrongFormulaText" duration-ms="33181" started-at="2020-08-14T18:36:26 UYT" finished-at="2020-08-14T18:36:59 UYT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongFormulaText -->
-      </class> <!-- Tests.ValidationRuleTest -->
+        </test-method> <!-- printVRuleLocator -->
+      </class> <!-- Tests.ExerciseLocatorPrinter -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

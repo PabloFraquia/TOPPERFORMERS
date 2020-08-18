@@ -28,7 +28,7 @@ public class ValidationRuleTest extends TestingBase{
 	String errorMessage;
 
 	
-	@BeforeSuite (groups = {"Non-Funtional"})
+	@BeforeSuite (groups = {"Non-Funtional", "VRuleTest"})
 	public void initValidationRuleProperties() {
 		
 		Properties valProperties = ValidationPropConfig.getValidationProperties();
@@ -38,7 +38,7 @@ public class ValidationRuleTest extends TestingBase{
 		errorMessage = valProperties.getProperty("errorMessage");
 	}
 	
-	@Test (groups = {"Non-Funtional"})
+	@Test (groups = {"Non-Funtional", "VRuleTest"})
 	public void noRequiredField() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
@@ -60,7 +60,7 @@ public class ValidationRuleTest extends TestingBase{
 		
 	}
 	
-	@Test (groups = {"Non-Funtional"})
+	@Test (groups = {"Non-Funtional", "VRuleTest"})
 	public void wrongFormulaText() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
@@ -80,7 +80,7 @@ public class ValidationRuleTest extends TestingBase{
 		driver.quit();
 	}
 	
-	@Test (groups = {"Funtional"})
+	@Test (groups = {"Funtional", "VRuleTest"})
 	public void correctFilledFields() {
 		WebDriver driver = DriverConfig.getDriverInitializer("firefox");
 		
