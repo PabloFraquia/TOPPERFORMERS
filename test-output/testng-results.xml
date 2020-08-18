@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-18T13:05:46 UYT" name="Default suite" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8571">
+  <suite name="Default suite" duration-ms="153956" started-at="2020-08-18T17:13:15 UYT" finished-at="2020-08-18T17:15:49 UYT">
     <groups>
+      <group name="Funtional">
+        <method signature="ValidationRuleTest.correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@ae13544]" name="correctFilledFields" class="Tests.ValidationRuleTest"/>
+      </group> <!-- Funtional -->
+      <group name="VRuleTest">
+        <method signature="ValidationRuleTest.correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@ae13544]" name="correctFilledFields" class="Tests.ValidationRuleTest"/>
+      </group> <!-- VRuleTest -->
     </groups>
-    <test started-at="2020-08-18T13:05:46 UYT" name="Default test" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8571">
-      <class name="Tests.ExerciseLocatorPrinter">
-        <test-method signature="printLoginLocator()[pri:0, instance:Tests.ExerciseLocatorPrinter@20d28811]" started-at="2020-08-18T13:05:47 UYT" name="printLoginLocator" finished-at="2020-08-18T13:05:55 UYT" duration-ms="8541" status="PASS">
+    <test name="Default test" duration-ms="153956" started-at="2020-08-18T17:13:15 UYT" finished-at="2020-08-18T17:15:49 UYT">
+      <class name="Tests.ValidationRuleTest">
+        <test-method status="PASS" signature="initValidationRuleProperties()[pri:0, instance:Tests.ValidationRuleTest@ae13544]" name="initValidationRuleProperties" is-config="true" duration-ms="19" started-at="2020-08-18T17:13:15 UYT" finished-at="2020-08-18T17:13:15 UYT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printLoginLocator -->
-      </class> <!-- Tests.ExerciseLocatorPrinter -->
+        </test-method> <!-- initValidationRuleProperties -->
+        <test-method status="PASS" signature="correctFilledFields()[pri:0, instance:Tests.ValidationRuleTest@ae13544]" name="correctFilledFields" duration-ms="153872" started-at="2020-08-18T17:13:15 UYT" finished-at="2020-08-18T17:15:49 UYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctFilledFields -->
+      </class> <!-- Tests.ValidationRuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

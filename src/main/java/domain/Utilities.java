@@ -10,10 +10,10 @@ public class Utilities {
 		String aux = welement.toString();
 		if (aux.contains("selector")) {
 			aux = aux.split("selector:")[1];
-			locator=aux.substring(1, aux.length()-2);
+			locator=aux.substring(1, aux.length()-1);
 		} else if (aux.contains("xpath")) {
 			aux = aux.split("xpath:")[1];
-			locator=aux.substring(1, aux.length()-2);
+			locator=aux.substring(1, aux.length()-1);
 		}
 		return locator;
 	}
