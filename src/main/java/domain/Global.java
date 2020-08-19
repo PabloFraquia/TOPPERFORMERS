@@ -2,9 +2,11 @@ package domain;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -36,7 +38,7 @@ public class Global {
 	}
 	public void waitForTitle(String title) {
 		//wait.until(ExpectedConditions.titleContains(title));
-		
+
 		Wait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
 			       .withTimeout(Duration.ofSeconds(20))
 			       .pollingEvery(Duration.ofSeconds(5))
