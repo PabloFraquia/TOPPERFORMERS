@@ -11,6 +11,7 @@
 		<classes>
 			<class name="Tests.LoginTest"/>
 			<class name="Tests.ValidationRuleTest"/>
+			<class name="Tests.ExerciseLocatorPrinter"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
